@@ -1,0 +1,70 @@
+BASE:
+  SEED                : 8
+
+DATA:
+  TRAIN_DATA_PATH     : '../data/train/train.csv'
+  TRAIN_FILE          : 'dataset.csv'
+  PSEUDO_LABEL_FILE   : 'dataset_pseudo_labeled.csv'
+  N_CHANNEL           : 3
+  N_CLASS             : 12
+  
+MODEL:
+  MASK_FOLDER         : 'mask_model'
+  PSEUDO_MASK_FOLDER  : 'pseudo_mask_model'
+  CLF_FOLDER          : 'clf_model'
+  
+TRAIN:
+  IMG_SIZE            : 200
+  IMG_MEAN            : 0.4
+  IMG_STD             : 0.1
+  DEVICE              : 'cuda'
+  BATCH_SIZE          : 32
+  WORKERS             : 4
+  PIN_MEMORY          : True
+  MASK:
+    EPOCHS            : 50
+    PRETRAINED        : False
+    CONF              : 0.5
+  PSEUDO_MASK:
+    EPOCHS            : 150
+  CLF:
+    NAME              : 'efficientnetv2_rw_s'
+    EPOCHS            : 50
+    PRETRAINED        : False
+    SMOOTHING         : 0.1
+  
+OPTIMIZER:
+  MASK:
+    LR                : 0.0001
+    EPSILON           : 0.00000001
+    WEIGHT_DECAY      : 0.0001
+    WEIGHT_DECOUPLE   : False
+    RECTIFY           : False
+  CLF:
+    LR                : 0.001
+    EPSILON           : 0.00000001
+    WEIGHT_DECAY      : 0.01
+    WEIGHT_DECOUPLE   : True
+    RECTIFY           : False
+    
+SCHEDULER:
+  MASK:
+    FIRST_CYCLE_STEPS : 1.00
+    WARMUP_STEPS      : 0.25
+    MIN_LR            : 0.00001
+  CLF:
+    FIRST_CYCLE_STEPS : 1.00
+    WARMUP_STEPS      : 0.25
+    MIN_LR            : 0.0001
+    
+TEST:
+  DEVICE              : 'cuda'
+  IMG_FOLDER          : '../data/predict/'
+  MASK_WEIGHT         : 'mask_model/best.pth'
+  CLF_WEIGHT          : 'clf_model/best.pth'
+  IMG_SIZE            : 100
+  BATCH_SIZE          : 32
+  TTA_NUM             : 10
+  CONF                : 0.5
+  IOU_THR             : 0.7
+  SKIP_BOX_THR        : 0.0001
