@@ -37,10 +37,7 @@ Bounding Box 는 물체의 위치와 크기를 탐지하는 좋은 수단이지�
 
 
 ## 구현 방법
-
 ![img_04](images/img_04.png)
-
-​                                                                                      그림: 구현 방법 
 
 - 데이터 전처리
   원본 이미지는 100 x 100 크기 단일 채널의 흑백 이미지입니다. Bounding Box를 더 잘 찾도록 상하 좌우 픽셀값 차이 (Pixel Difference) 및 미분 값 (Image Gradient)를 계산하여 3개 채널을 가진 이미지를 생성합니다.
