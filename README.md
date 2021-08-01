@@ -24,8 +24,7 @@
 경연의 범위는 필름 이미지 내 이물의 종류 구분 (Classification)과 위치와 크기를 나타내는 경계 상자 (Bounding Box)를 찾는 것입니다.
 
 ![img_01](images/img_01.png)
-
-필름 생산 공정도 ([https://www.skcareersjournal.com/tag/필름공정](https://www.skcareersjournal.com/tag/%ED%95%84%EB%A6%84%EA%B3%B5%EC%A0%95))
+[https://www.skcareersjournal.com/tag/필름공정](https://www.skcareersjournal.com/tag/%ED%95%84%EB%A6%84%EA%B3%B5%EC%A0%95)
 
 
 
