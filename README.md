@@ -14,7 +14,6 @@
 제1회 SK AI 경연은 '21년 SK 이천포럼의 행사입니다. 이번 경연은 SK케미칼의 Film 이미지 데이터를 활용한 불량 탐지를 주제로 진행되었습니다.
 
 
-
 ## 목적
 
 필름 생산 공정 중 생산 완료 전 단계에서 이물검사기를 사용해 완제품 생산 단계의 필름을 검사합니다. 이물검사기에서 탐지된 이물 중에는 정상판정이 가능한 것과 불량이 나뉘기 때문에 품질 관리 담당자가 맨눈으로 검사를 한 번 더 진행합니다. 최근 스마트폰, 디스플레이, 배터리 등의 수요 증가로 더 정교하고 더 많은 이물 검사가 필요하게 되었습니다. 이에 따라 제품의 합격 여부 판정을 자동화하는 모델을 개발하는 것이 목적입니다.
@@ -23,7 +22,6 @@
 
 ![img_01](images/img_01.png)
 [https://www.skcareersjournal.com/tag/필름공정](https://www.skcareersjournal.com/tag/%ED%95%84%EB%A6%84%EA%B3%B5%EC%A0%95)
-
 
 
 ## 이물 탐지에서 Bounding Box의 단점
@@ -35,8 +33,7 @@ Bounding Box 는 물체의 위치와 크기를 탐지하는 좋은 수단이지�
 이러한 문제를 해결하고자 물체를 좀 더 직접적으로 탐지할 수 있는 영상 분할 기법 (Image Segmentation)을 시도했습니다. Image Segmentation에서는 물체를 픽셀 단위로 탐지하기 때문에 이물의 크기를 더 정확히 측정할 수 있습니다. 아래 그림에서는 Bounding Box와 Segmentation으로 집의 위치를 탐지하는데 Segmentation이 더 세밀하게 구분하고 있음을 확인 할 수 있습니다.
 
 <img src="images/img_03.png" alt="img_03" width="300" height="300">
-[https://github.com/matterport/Mask_RCNN] (https://github.com/matterport/Mask_RCNN)
-
+[](https://github.com/matterport/Mask_RCNN)
 
 
 ## 구현 방법
