@@ -4,8 +4,10 @@
 
 ## 들어가기에 앞서
 
-본 문서에서는 웹에 공개된 필름 이미지만을 사용하였음을 미리 밝힙니다.
+본 문서에서는 웹에 공개된 필름 이미지만을 사용하였음을 미리 밝힙니다.  
+
 [https://www.programmersought.com/article/17576123317](https://www.programmersought.com/article/17576123317/)  
+
 [http://winspection.com/surface-inspection.php](http://winspection.com/surface-inspection.php)
 
 
