@@ -50,9 +50,9 @@ https://github.com/matterport/Mask_RCNN
 
 
 
-- Mask pseudo labeling  
+- Mask pseudo labeling [[Code](https://github.com/phykn/film-defect-detection/blob/main/04_mask_pseudo_labeling.ipynb)]  
 Edge Detection으로 찾아낸 이물 경계는 정확하지 않습니다. 이러한 문제를 해결하기 위해 Mask R-CNN을 50 epoch 만큼 훈련 후 예측된 결과로 Mask를 다시 생성해 훈련에 활용했습니다.
-- Model [[Code]](https://github.com/phykn/film-defect-detection/blob/main/01_make_dataset.ipynb)  
+- Model [[Code1]](https://github.com/phykn/film-defect-detection/blob/main/02_train_mask.ipynb)[[Code2]](https://github.com/phykn/film-defect-detection/blob/main/03_train_clf.ipynb)[[Code3]](https://github.com/phykn/film-defect-detection/blob/main/05_train_pseudo_mask.ipynb)  
 모델로는 Mask R-CNN ([https://arxiv.org/abs/1703.06870](https://arxiv.org/abs/1703.06870)) 을 사용했습니다. 보조적으로 이번 경연의 데이터는 한 이미지에는 하나의 이물 종류만 존재하기 때문에 이물 종류 구분을 위한 classification 모델로 EfficientNetV2 ([https://arxiv.org/abs/2104.00298](https://arxiv.org/abs/2104.00298)) 를 활용했습니다. 모델 훈련에 사용된 기법은 아래와 같습니다.
 
 1. **Data Augmentation**: Horizontal Flip + Random Rotation + Random Brightness Contrast  + Random Scale
