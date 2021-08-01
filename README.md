@@ -101,5 +101,5 @@ Box 예측 성능은 COCO metric 기준 (mAP@IoU=[.50:.05:.95]) 0.6151 입니다
 - Weighted Boxes Fusion: IoU threshold = 0.7, Skip box threshold = 1e-4 (or 0)  
 2. 도움이 안됨  
 - Augmentation: Random Rotation,  Random Brightness Contrast  
--TTA: Random Rotation,  Random Brightness Contrast  
+- TTA: Random Rotation,  Random Brightness Contrast  
 - Classification 모델: Mask R-CNN 단독으로 사용 시 성능이 좋음  
