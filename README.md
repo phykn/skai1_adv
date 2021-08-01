@@ -24,7 +24,7 @@
 [https://www.skcareersjournal.com/tag/필름공정](https://www.skcareersjournal.com/tag/%ED%95%84%EB%A6%84%EA%B3%B5%EC%A0%95)
 
 
-## 이물 탐지에서 Bounding Box의 단점
+## Segmentation 적용 이유
 
 Bounding Box 는 물체의 위치와 크기를 탐지하는 좋은 수단이지만 물체의 모양에 따라 크기를 정확하게 측정하지 못하는 단점이 있습니다. 아래 그림과 같이 긴 형태의 이물은 이미지 회전에 따라 Bounding Box 의 크기가 크게 차이 날 수 있습니다. 아래 그림 처럼 긴 형태의 이물의 경우 이미지 회전에 따라 (a > b > c) 경계 상자의 면적이 10배 이상 차이 나게 됩니다. 
 
