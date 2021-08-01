@@ -58,7 +58,7 @@ Bounding Box 는 물체의 위치와 크기를 탐지하는 좋은 수단이지�
 
 ![img_05_06](images/img_05_06.png)
 
-​           Canny edge ([https://docs.opencv.org/3.4/da/d22/tutorial_py_canny.html](https://docs.opencv.org/3.4/da/d22/tutorial_py_canny.html))     Concave hull ([ian-ko.com](https://www.ian-ko.com/ET_GeoWizards/UserGuide/concaveHull.htm))
+​           Canny edge ([https://docs.opencv.org/3.4/da/d22/tutorial_py_canny.html](https://docs.opencv.org/3.4/da/d22/tutorial_py_canny.html))          Concave hull ([ian-ko.com](https://www.ian-ko.com/ET_GeoWizards/UserGuide/concaveHull.htm))
 
 
 
