@@ -30,13 +30,13 @@
 
 ## 이물 탐지에서 Bounding Box의 단점
 
-이러한 문제를 해결하고자 물체를 좀 더 직접적으로 탐지할 수 있는 영상 분할 기법 (Image Segmentation)을 시도했습니다. Image Segmentation에서는 물체를 픽셀 단위로 탐지하기 때문에 이물의 크기를 더 정확히 측정할 수 있습니다. 아래 그림에서는 Bounding Box와 Segmentation으로 집의 위치를 탐지하는데 Segmentation이 더 세밀하게 구분하고 있음을 확인 할 수 있습니다.
+Bounding Box 는 물체의 위치와 크기를 탐지하는 좋은 수단이지만 물체의 모양에 따라 크기를 정확하게 측정하지 못하는 단점이 있습니다. 아래 그림과 같이 긴 형태의 이물은 이미지 회전에 따라 Bounding Box 의 크기가 크게 차이 날 수 있습니다. 아래 그림 처럼 긴 형태의 이물의 경우 이미지 회전에 따라 (a > b > c) 경계 상자의 면적이 10배 이상 차이 나게 됩니다. 
 
 ![img_02](images/img_02.png)
 
 ​                                                         그림: 이미지 회전에 따른 Bounding Box 크기 변화
 
-이러한 문제를 해결하고자 물체를 좀 더 직접적으로 탐지할 수 있는 영상 분할 기법 (Image Segmentation)을 시도했습니다. Image Segmentation에서는 물체를 픽셀 단위로 탐지하기 때문에 이물의 크기를 더 정확히 측정할 수 있습니다.
+이러한 문제를 해결하고자 물체를 좀 더 직접적으로 탐지할 수 있는 영상 분할 기법 (Image Segmentation)을 시도했습니다. Image Segmentation에서는 물체를 픽셀 단위로 탐지하기 때문에 이물의 크기를 더 정확히 측정할 수 있습니다. 아래 그림에서는 Bounding Box와 Segmentation으로 집의 위치를 탐지하는데 Segmentation이 더 세밀하게 구분하고 있음을 확인 할 수 있습니다.
 
 <img src="images/img_03.png" alt="img_03" width="300" height="300">
 
