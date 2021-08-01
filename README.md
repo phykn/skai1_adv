@@ -41,7 +41,7 @@ https://github.com/matterport/Mask_RCNN
 
 - 데이터 전처리  
   원본 이미지는 100 x 100 크기 단일 채널의 흑백 이미지입니다. Bounding Box를 더 잘 찾도록 상하 좌우 픽셀값 차이 (Pixel Difference) 및 미분 값 (Image Gradient)를 계산하여 3개 채널을 가진 이미지를 생성합니다.
-- 마스크 추가
+- 마스크 추가  
   이번 경연에서는 마스크를 제공하지 않습니다. Segmentation을 위한 Mask label을 생성하기 위해 이물의 Edge를 검출합니다. Edge 검출에는 canny edge detection 사용했으며, 경계값을 얻기 위해 concave hull 알고리즘을 적용했습니다.
 
 ![img_05_06](images/img_05_06.png)
@@ -50,21 +50,21 @@ https://github.com/matterport/Mask_RCNN
 
 
 
-- Mask pseudo labeling
+- Mask pseudo labeling  
 Edge Detection으로 찾아낸 이물 경계는 정확하지 않습니다. 이러한 문제를 해결하기 위해 Mask R-CNN을 50 epoch 만큼 훈련 후 예측된 결과로 Mask를 다시 생성해 훈련에 활용했습니다.
-- Model
+- Model  
 모델로는 Mask R-CNN ([https://arxiv.org/abs/1703.06870](https://arxiv.org/abs/1703.06870)) 을 사용했습니다. 보조적으로 이번 경연의 데이터는 한 이미지에는 하나의 이물 종류만 존재하기 때문에 이물 종류 구분을 위한 classification 모델로 EfficientNetV2 ([https://arxiv.org/abs/2104.00298](https://arxiv.org/abs/2104.00298)) 를 활용했습니다. 모델 훈련에 사용된 기법은 아래와 같습니다.
 
 1. **Data Augmentation**: Horizontal Flip + Random Rotation + Random Brightness Contrast  + Random Scale
 2. **Optimizer**: AdaBelief ([https://arxiv.org/abs/2010.07468](https://arxiv.org/abs/2010.07468))
 3. **Scheduler**: CosineAnnealingWarmupRestarts ([https://github.com/katsura-jp/pytorch-cosine-annealing-with-warmup](https://github.com/katsura-jp/pytorch-cosine-annealing-with-warmup))
-- TTA
+- TTA  
 결과 예측 시 TTA (Test Time Augmentation)을 사용합니다. TTA 적용시 성능이 약 3% 향상됩니다. Object Detection 문제에 적합하다고 알려진 Horizontal Flip + Multiple Scale을 적용했습니다.
 
 ![img_07](images/img_07.png)
-https://chacha95.github.io/2021-06-26-data-augmentation2/
+https://chacha95.github.io/2021-06-26-data-augmentation2
 
-- Weighted Boxes Fusion
+- Weighted Boxes Fusion  
 TTA 이후 여러 개의 Bounding Box가 생성되는데 여기에 Weighted boxes fusion (WBF, [https://arxiv.org/abs/1910.13302](https://arxiv.org/abs/1910.13302))을 적용합니다. WBF는 NMS와 달리 모든 Bounding Box를 사용해 평균적인 Box를 얻어내기 때문에 성능 향상에 도움이 되는 것으로 알려져 있습니다.
 
 
