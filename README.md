@@ -33,7 +33,7 @@ Bounding Box 는 물체의 위치와 크기를 탐지하는 좋은 수단이지�
 이러한 문제를 해결하고자 물체를 좀 더 직접적으로 탐지할 수 있는 영상 분할 기법 (Image Segmentation)을 시도했습니다. Image Segmentation에서는 물체를 픽셀 단위로 탐지하기 때문에 이물의 크기를 더 정확히 측정할 수 있습니다. 아래 그림에서는 Bounding Box와 Segmentation으로 집의 위치를 탐지하는데 Segmentation이 더 세밀하게 구분하고 있음을 확인 할 수 있습니다.
 
 <img src="images/img_03.png" alt="img_03" width="300" height="300">
-(https://github.com/matterport/Mask_RCNN)
+https://github.com/matterport/Mask_RCNN
 
 
 ## 구현 방법
@@ -62,8 +62,7 @@ Edge Detection으로 찾아낸 이물 경계는 정확하지 않습니다. 이�
 결과 예측 시 TTA (Test Time Augmentation)을 사용합니다. TTA 적용시 성능이 약 3% 향상됩니다. Object Detection 문제에 적합하다고 알려진 Horizontal Flip + Multiple Scale을 적용했습니다.
 
 ![img_07](images/img_07.png)
-
-​                그림: TTA 적용 Augmentation ([https://chacha95.github.io/2021-06-26-data-augmentation2/](https://chacha95.github.io/2021-06-26-data-augmentation2/))
+https://chacha95.github.io/2021-06-26-data-augmentation2/
 
 - Weighted Boxes Fusion
 TTA 이후 여러 개의 Bounding Box가 생성되는데 여기에 Weighted boxes fusion (WBF, [https://arxiv.org/abs/1910.13302](https://arxiv.org/abs/1910.13302))을 적용합니다. WBF는 NMS와 달리 모든 Bounding Box를 사용해 평균적인 Box를 얻어내기 때문에 성능 향상에 도움이 되는 것으로 알려져 있습니다.
