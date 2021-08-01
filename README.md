@@ -94,7 +94,7 @@ Box 예측 성능은 COCO metric 기준 (mAP@IoU=[.50:.05:.95]) 0.6151 입니다
 마스크를 Edge Detection으로 생성했기 때문에 이미지가 희미한 경우 탐지하지 못합니다. 문제를 해결하기 위해 Super Resolution 등을 시도해 봤지만, 결과가 좋아지지는 않았습니다. CAM (Class Activation Map) 등 AI 방법론이 더욱 효과적일 것으로 생각됩니다.
 
 
-## 성능 영향 
+## 성능 영향 항목
 
 1. 도움이 됨  
 - Augmentation: Horizontal Flip,  Random Scale  
